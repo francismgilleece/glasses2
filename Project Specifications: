@@ -1,0 +1,29 @@
+Project Specifications:
+
+Hardware: 
+- Raspberry Pi Zero 2 W
+- 128x64 px OLED display
+    -Connections: SPI 
+        VCC             ->    5V (Pin 2)
+        GND             ->    Ground (Pin 6)
+        DIN (MOSI)      ->    GPIO 10 (MOSI) (Pin 19)
+        CLK (SCLK)      ->    GPIO 11 (SCLK) (Pin 23)
+        CS              ->    GPIO 8 (CE0) (Pin 24)
+        DC              ->    GPIO 24 (Pin 18)
+        RST             ->    GPIO 25 (Pin 22)
+    -Orientation: Landscape
+
+
+API's to include: each one is configurable to be displayed or not through a settings file
+Weather: https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=temperature_2m_max,temperature_2m_min,sunset,sunrise&hourly=precipitation_probability&current=temperature_2m&timezone=America%2FChicago&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch
+
+
+Also include: current date and time - always
+
+EXAMPLE SETUP:
+__________________
+| Date/Time     |
+| Weather       |
+|               |
+|               |
+|________________
